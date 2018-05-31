@@ -1,0 +1,29 @@
+#title {
+	display: block;;
+	width: 70%;
+	height: 40px;
+	padding: 0 16px;
+	background: #f4f4f4;
+	font-size: 16px;
+	color: #4f4f4f;
+	border: none;
+	box-sizing: border-box
+}
+
+#editor {
+	width: 70%;
+	margin-top: 20px;
+	height:200px;
+	display: block;
+}
+
+#submit {
+	margin-top: 20px;
+	width: 100px;	
+	background: #c92027;
+	padding: 8px 0;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 4px;
+	height: 44px;
+}
