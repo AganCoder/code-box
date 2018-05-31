@@ -1,7 +1,7 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const tool = require("./Tools/tool")
-const UserError = require("./model/UserError")
+const UserError = require("./error/UserError")
 
 const app = express()
 
@@ -10,26 +10,22 @@ app.use(bodyParser.json()) // parsing Json
 app.use(bodyParser.urlencoded({ extended: true })) // // for parsing application/x-www-form-urlencode
 
 app.get("/verifyCode", function (req, res) {    
-    // 接入短信验证码
     const query = req.query
     const phoneNumber = query.phoneNumber
 
+    // 检查验证码是否有效
     if (tool.isAvaildPhoneNumber(phoneNumber) == false) {
         res.status(200).send({
             success: false,
-            message: "手机号码无效"
+            message: UserError.infos[UserError.InvalidPhoneNumber].message
         })     
         res.end()
         return 
     }
-
+    
     // 2. 检查改用户是否已经注册过
 
     // 3. 发送验证码
-
-
-
-
     res.send("abcdefthi")
 })
 
