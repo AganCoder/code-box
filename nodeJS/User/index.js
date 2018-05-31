@@ -2,6 +2,26 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const tool = require("./Tools/tool")
 const UserError = require("./error/UserError")
+const mysql =require("mysql")
+
+var connect = mysql.createConnection({
+    host: '127.0.0.1',
+    user: 'root',
+    password: "root123456",
+    database: 'ezinfo'
+})
+// connect.connect()
+
+var sql = "Select * from User";
+connect.query(sql, function (error, results, fields) {
+
+    if (error) {
+        console.log(error)
+        return       
+    }
+    console.log("result: ", results)
+})
+
 
 const app = express()
 
@@ -22,7 +42,7 @@ app.get("/verifyCode", function (req, res) {
         res.end()
         return 
     }
-    
+
     // 2. 检查改用户是否已经注册过
 
     // 3. 发送验证码
@@ -36,7 +56,7 @@ app.post("/register", function (req, res, next)  {
     res.end()
 })
  
-app.listen(8080)
+app.listen(9090)
 
-console.log("Start Server, Port is ", 8080)
+console.log("Start Server, Port is ", 9090)
 
