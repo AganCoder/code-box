@@ -116,10 +116,6 @@ app.post("/register", function (req, res, next) {
             }).end()      
         })
     })
-
-
-    
-    
 })
 
 app.listen(9090)
