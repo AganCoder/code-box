@@ -7,15 +7,20 @@ var UserError = {
     PhoneNumberExist: 2,
     PhoneNumberOrCodeWrong: 3,
     PasswordCanNotNull: 4,
+    ServiceInterError: 99,
     infos: {
         0: { message: "无效的手机号码,请输入正确的手机号"},
         1: { message: "验证码错误"},
         2: { message: "手机号码已存在,请直接登录" },
         3: { message: "手机号或者验证码错误"},
-        4: { message: "密码不能为空"}
+        4: { message: "密码不能为空"},
+        99: {message: "服务器内部错误"}
     }
 }
 
 Object.freeze(UserError)
+
+
+
 
 exports = module.exports = UserError
