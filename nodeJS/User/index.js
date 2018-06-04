@@ -26,6 +26,31 @@ app.get("/verifyCode", function (req, res) {
 
     console.log(query);
 
+    // 检查验证码是否有效
+    const checkValidNumberPromis = new Promise(((resolve, reject) => {
+        console.log("isAvaildPhoneNumber");
+        if (tool.isAvaildPhoneNumber(phoneNumber) == false) {
+            return reject(UserError.InvalidPhoneNumber)
+        }
+        resolve()
+    }))
+
+    // 2. 检查改用户是否已经注册过${expression}
+    const checkExistPromis = new Promise((resolve, reject) => {
+
+        let sql = `SELECT COUNT(ID) AS id FROM USER WHERE PHONENUMBER = ${phoneNumber}`;
+        console.log(sql);
+        db.query(sql, function (error, data, fileds) {
+            if (error) {
+                return reject(UserError.ServiceInterError)
+            }
+            if (data[0].id != 0) {
+                return reject(UserError.PhoneNumberExist)
+            }
+            resolve()
+        });
+    });
+
     // 3. 发送验证码
     const sendCodePromis = new Promise((resolve, reject) => {
 
@@ -42,38 +67,14 @@ app.get("/verifyCode", function (req, res) {
         });
     })
 
-
-    // 2. 检查改用户是否已经注册过${expression}
-    const checkExistPromis = new Promise((resolve, reject) => {
-
-        let sql = `SELECT COUNT(ID) AS id FROM USER WHERE PHONENUMBER = ${phoneNumber}`;
-        console.log(sql);
-        db.query(sql, function (error, data, fileds) {
-            if (error) {
-                return reject(UserError.ServiceInterError)
-            }
-            if (data[0].id != 0) {
-                return reject(UserError.PhoneNumberExist)
-            }
-            resolve(sendCodePromis)
-        });
-    });
-
-    // 检查验证码是否有效
-    const promise = new Promise(((resolve, reject) => {
-        console.log("isAvaildPhoneNumber");
-        if (tool.isAvaildPhoneNumber(phoneNumber) == false) {
-            return reject(UserError.InvalidPhoneNumber)
-        }
-        resolve(checkExistPromis)
-    }))
+    const promise = Promise.all([checkValidNumberPromis, checkExistPromis, sendCodePromis]);
 
     promise.then(function (resolvedValue) {
         res.status(200).send({
             success: true,
             message: "验证码发送成功"
         }).end()
-        
+
     }).catch(function (userError) {
         res.status(200).send({
             success: false,
