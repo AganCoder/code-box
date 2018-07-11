@@ -1,0 +1,5 @@
+# WWDC2018-Using Grouped Notifications
+
+WWDC2016年的时候, 苹果发布了 `UNNotification.framework`, 让用户感受到了全新的通知查看功能。 在今年WWDC2018的时候, Apple 对此功能进行了 **提升**, 增加了通知消息 **Grouped** 的功能。
+
+试想, 如果你每天微信很繁忙, 有各种群组, 有好友等的, 通知每天一堆堆, 如果能将其进行分组显示, 想想都很棒(不知微信以后会不会这么搞)。
