@@ -15,7 +15,6 @@ class Manager {
     // TODO: Set
     private var configurations: [SocialInfo] = []
     
-    
     func register(with configurations: [SocialInfo]) {
         
         self.configurations = configurations
@@ -29,12 +28,12 @@ class Manager {
         return first != nil
     }
     
-    func auth(with type: Social, compplete: @escaping (String) -> Void) {
+    func auth(with type: Social, complete: @escaping(Result<User, RError>) -> Void) {
         
         let cInfo = self.configurations.reversed().first { $0.type == type }
         
         guard let info = cInfo else { return }
         
-        info.wrapper.auth(compplete: compplete)
+        info.wrapper.auth(complete: complete)
     }
 }

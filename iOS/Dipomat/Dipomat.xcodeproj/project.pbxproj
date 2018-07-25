@@ -20,6 +20,11 @@
 		844F2EA8210724710054FE5D /* Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2EA7210724710054FE5D /* Weibo.swift */; };
 		844F2EAA210724840054FE5D /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2EA9210724840054FE5D /* Wechat.swift */; };
 		844F2EAC210724960054FE5D /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2EAB210724960054FE5D /* QQ.swift */; };
+		8498FB1E21083E5C006AF458 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498FB1D21083E5C006AF458 /* TencentOpenAPI.framework */; };
+		8498FB2121083E73006AF458 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498FB2021083E73006AF458 /* SystemConfiguration.framework */; };
+		849DD42421084DFC0016234F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DD42321084DFC0016234F /* User.swift */; };
+		849DD42921084FF00016234F /* RError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DD42821084FF00016234F /* RError.swift */; };
+		849DD4302108782C0016234F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DD42F2108782C0016234F /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,12 @@
 		844F2EA7210724710054FE5D /* Weibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weibo.swift; sourceTree = "<group>"; };
 		844F2EA9210724840054FE5D /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
 		844F2EAB210724960054FE5D /* QQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQ.swift; sourceTree = "<group>"; };
+		8498FB1D21083E5C006AF458 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		8498FB2021083E73006AF458 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8498FB2421084008006AF458 /* Dipomat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dipomat-Bridging-Header.h"; sourceTree = "<group>"; };
+		849DD42321084DFC0016234F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		849DD42821084FF00016234F /* RError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RError.swift; sourceTree = "<group>"; };
+		849DD42F2108782C0016234F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498FB2121083E73006AF458 /* SystemConfiguration.framework in Frameworks */,
+				8498FB1E21083E5C006AF458 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,7 @@
 			children = (
 				844F2E862107238C0054FE5D /* Dipomat */,
 				844F2E852107238C0054FE5D /* Products */,
+				8498FB1F21083E72006AF458 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +91,7 @@
 				844F2E8E2107238D0054FE5D /* Assets.xcassets */,
 				844F2E902107238D0054FE5D /* LaunchScreen.storyboard */,
 				844F2E932107238D0054FE5D /* Info.plist */,
+				8498FB2421084008006AF458 /* Dipomat-Bridging-Header.h */,
 			);
 			path = Dipomat;
 			sourceTree = "<group>";
@@ -92,6 +107,9 @@
 				844F2E9E210724130054FE5D /* Social.swift */,
 				844F2EA0210724280054FE5D /* Proxy.swift */,
 				844F2EA2210724410054FE5D /* Wrapper.swift */,
+				849DD42321084DFC0016234F /* User.swift */,
+				849DD42821084FF00016234F /* RError.swift */,
+				849DD42F2108782C0016234F /* Result.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -99,6 +117,7 @@
 		844F2EA4210724500054FE5D /* QQ */ = {
 			isa = PBXGroup;
 			children = (
+				8498FB1C21083E52006AF458 /* SDK */,
 				844F2EAB210724960054FE5D /* QQ.swift */,
 			);
 			path = QQ;
@@ -118,6 +137,22 @@
 				844F2EA7210724710054FE5D /* Weibo.swift */,
 			);
 			path = WeiBo;
+			sourceTree = "<group>";
+		};
+		8498FB1C21083E52006AF458 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				8498FB1D21083E5C006AF458 /* TencentOpenAPI.framework */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		8498FB1F21083E72006AF458 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8498FB2021083E73006AF458 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +187,7 @@
 				TargetAttributes = {
 					844F2E832107238C0054FE5D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -192,15 +228,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				844F2EAA210724840054FE5D /* Wechat.swift in Sources */,
+				849DD4302108782C0016234F /* Result.swift in Sources */,
 				844F2E9F210724130054FE5D /* Social.swift in Sources */,
 				844F2E8A2107238C0054FE5D /* ViewController.swift in Sources */,
 				844F2EAC210724960054FE5D /* QQ.swift in Sources */,
+				849DD42921084FF00016234F /* RError.swift in Sources */,
 				844F2E9B210723CC0054FE5D /* Manager.swift in Sources */,
 				844F2E9D210723F10054FE5D /* SocialInfo.swift in Sources */,
 				844F2EA8210724710054FE5D /* Weibo.swift in Sources */,
 				844F2EA3210724410054FE5D /* Wrapper.swift in Sources */,
 				844F2EA1210724280054FE5D /* Proxy.swift in Sources */,
 				844F2E882107238C0054FE5D /* AppDelegate.swift in Sources */,
+				849DD42421084DFC0016234F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +383,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85V32XYZPL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dipomat/Source/QQ/SDK",
+				);
 				INFOPLIST_FILE = Dipomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,6 +397,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Dipomat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dipomat/Dipomat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,8 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85V32XYZPL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dipomat/Source/QQ/SDK",
+				);
 				INFOPLIST_FILE = Dipomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.rsenjoyer.Dipomat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dipomat/Dipomat-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

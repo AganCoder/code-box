@@ -16,12 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let qq = SocialInfo(type: .qq, key: "222222")
-        let weiBo = SocialInfo(type: .weibo, key: "2045436852", redirectUrl: <#T##String?#>, secret: <#T##String?#>)
+        let qq = SocialInfo(type: .qq, key: "1105589890")
         
-        let QQ = SocialInfo(type: <#T##Social#>, key: <#T##String#>, redirectUrl: <#T##String?#>, secret: <#T##String?#>)
-        
-        Manager.shared.register(with: <#T##[SocialInfo]#>)
+        Manager.shared.register(with: [qq])
         
         return true
     }
@@ -45,9 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
     }
-
-
+    
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+         return Manager.shared.handleOpenUrl(with: url)
+    }
+    
+    
 }
 

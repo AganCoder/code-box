@@ -16,7 +16,6 @@ protocol Proxy: NSObjectProtocol {
     
     func handleOpenUrl(with url: URL) -> Bool
     
-    // 授权信息 瞎写的 可以进行授权设置
-    func auth(compplete: @escaping (String) -> Void)
+    func auth(complete: @escaping(Result<User, RError>) -> Void)
     
 }

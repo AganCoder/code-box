@@ -9,7 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBAction func tencentOAuth(_ sender: Any) {
+        
+        Manager.shared.auth(with: .qq) { (result) in
+            print(result)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

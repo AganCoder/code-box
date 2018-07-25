@@ -9,14 +9,11 @@
 import Foundation
 
 class SocialInfo: Equatable {
+    
     let type: Social
     let key: String
     let redirectUrl: String?
     let secret: String?
-    
-    public static func == (lhs: SocialInfo, rhs: SocialInfo) -> Bool {
-        return lhs.type == rhs.type && lhs.key == rhs.key
-    }
     
     init(type: Social, key: String, redirectUrl: String? = nil, secret: String? = nil) {
         self.type = type
@@ -37,4 +34,8 @@ class SocialInfo: Equatable {
         return _wrapper!
     }
     
+    public static func == (lhs: SocialInfo, rhs: SocialInfo) -> Bool {
+        return lhs.type == rhs.type && lhs.key == rhs.key
+    }    
 }
+

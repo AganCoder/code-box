@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Wrapper: NSObject {
+class Wrapper: NSObject, Proxy {
     
     var info: SocialInfo?
     
@@ -16,17 +16,15 @@ class Wrapper: NSObject {
         self.info = info
         super.init()
     }
-}
-
-extension Wrapper: Proxy{
     
-    @objc func handleOpenUrl(with url: URL) -> Bool {
+    func handleOpenUrl(with url: URL) -> Bool {
         return false
     }
     
-    @objc var isInstalled: Bool { return false }
+    var isInstalled: Bool { return false }
     
-    @objc func register() {}
+    func register() {}
     
-    @objc func auth(compplete: @escaping (String) -> Void) {}
+    func auth(complete: @escaping (Result<User, RError>) -> Void) { }
 }
+
