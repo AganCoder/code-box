@@ -8,11 +8,36 @@
 
 import Foundation
 
-public enum SharedKey: String {
-    case title
+protocol Shareable {
+    var keys: [SharedKey] { get }
 }
 
-
+public enum SharedKey: String {
+    
+    case userInfo
+    
+    case text
+    
+    case messageId
+    
+    case title
+    
+    case desc
+    
+    case thumbnailableImage
+    
+    case data
+    
+    case audioUrl
+    
+    case audioDataUrl
+    
+    case videoUrl
+    
+    case videoDataUrl
+    
+    case webPageUrl
+}
 
 extension SharedKey: Hashable {
     
@@ -20,3 +45,43 @@ extension SharedKey: Hashable {
         return lhs.hashValue == rhs.hashValue
     }
 }
+
+
+
+
+
+class TextMessage: Message {
+    
+    var text: String?
+}
+
+class MediaMessage: Message {
+    
+    var messageId: String?
+    var title: String?
+    var desc: String?
+    var thumbnailableImage: UIImage?
+}
+
+class ImageMessage: MediaMessage {
+    var data: Data?
+}
+
+class AudioMessage: MediaMessage {
+    var audioUrl: String?
+    var audioDataUrl: String?
+}
+
+class VideoMessage: MediaMessage {
+    
+    var videoUrl: String?
+    
+    var videoDataUrl: String?
+}
+
+class PageMessage: MediaMessage {
+    
+    var webPageUrl: String?
+}
+
+

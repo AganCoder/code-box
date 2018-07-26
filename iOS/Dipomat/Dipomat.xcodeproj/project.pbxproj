@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8426379521097F4300A66D5A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426379421097F4300A66D5A /* Message.swift */; };
 		844F2E882107238C0054FE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2E872107238C0054FE5D /* AppDelegate.swift */; };
 		844F2E8A2107238C0054FE5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2E892107238C0054FE5D /* ViewController.swift */; };
 		844F2E8D2107238C0054FE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F2E8B2107238C0054FE5D /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8426379421097F4300A66D5A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		844F2E842107238C0054FE5D /* Dipomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F2E872107238C0054FE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844F2E892107238C0054FE5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				849DD42821084FF00016234F /* RError.swift */,
 				849DD42F2108782C0016234F /* Result.swift */,
 				849DD4322108860F0016234F /* Share.swift */,
+				8426379421097F4300A66D5A /* Message.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				849DD4332108860F0016234F /* Share.swift in Sources */,
 				844F2EA3210724410054FE5D /* Wrapper.swift in Sources */,
 				844F2EA1210724280054FE5D /* Proxy.swift in Sources */,
+				8426379521097F4300A66D5A /* Message.swift in Sources */,
 				844F2E882107238C0054FE5D /* AppDelegate.swift in Sources */,
 				849DD42421084DFC0016234F /* User.swift in Sources */,
 			);
