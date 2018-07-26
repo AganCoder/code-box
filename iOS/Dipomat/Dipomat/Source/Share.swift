@@ -12,6 +12,13 @@ protocol Shareable {
     var keys: [SharedKey] { get }
 }
 
+extension Shareable {
+    
+    var keys: [SharedKey] {
+        return []
+    }
+}
+
 public enum SharedKey: String {
     
     case userInfo
@@ -64,18 +71,6 @@ extension SharedKey: Hashable {
 class TextMessage: Message {
     
     var text: String?
-    
-    var keys: [SharedKey] {
-        return [.text]
-    }
-}
-
-class MediaMessage: Message {
-    
-    var messageId: String?
-    var title: String?
-    var desc: String?
-    var thumbnailableImage: UIImage?
     
     var keys: [SharedKey] {
         return [.text]

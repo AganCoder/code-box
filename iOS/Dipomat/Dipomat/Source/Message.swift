@@ -37,6 +37,12 @@ protocol Message: Shareable {
 
 extension Message {
     
+}
+
+extension Message {
+    
+
+    
     var userInfo: [AnyHashable: Any]? {
         get { return nil }
         set {}

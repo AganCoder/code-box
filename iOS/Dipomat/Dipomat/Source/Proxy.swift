@@ -18,4 +18,6 @@ protocol Proxy: NSObjectProtocol {
     
     func auth(complete: @escaping(Result<User, RError>) -> Void)
     
+    func shareMessage(with: Message)
+    
 }

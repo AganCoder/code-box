@@ -26,5 +26,7 @@ class Wrapper: NSObject, Proxy {
     func register() {}
     
     func auth(complete: @escaping (Result<User, RError>) -> Void) { }
+    
+    func shareMessage(with: Message) {}
 }
 

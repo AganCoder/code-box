@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8426379521097F4300A66D5A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426379421097F4300A66D5A /* Message.swift */; };
+		842637982109834000A66D5A /* QQMessageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842637972109834000A66D5A /* QQMessageConvertible.swift */; };
 		844F2E882107238C0054FE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2E872107238C0054FE5D /* AppDelegate.swift */; };
 		844F2E8A2107238C0054FE5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F2E892107238C0054FE5D /* ViewController.swift */; };
 		844F2E8D2107238C0054FE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F2E8B2107238C0054FE5D /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		8426379421097F4300A66D5A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		842637972109834000A66D5A /* QQMessageConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQMessageConvertible.swift; sourceTree = "<group>"; };
 		844F2E842107238C0054FE5D /* Dipomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F2E872107238C0054FE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844F2E892107238C0054FE5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				8498FB1C21083E52006AF458 /* SDK */,
 				844F2EAB210724960054FE5D /* QQ.swift */,
+				842637972109834000A66D5A /* QQMessageConvertible.swift */,
 			);
 			path = QQ;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				844F2E9B210723CC0054FE5D /* Manager.swift in Sources */,
 				844F2E9D210723F10054FE5D /* SocialInfo.swift in Sources */,
 				844F2EA8210724710054FE5D /* Weibo.swift in Sources */,
+				842637982109834000A66D5A /* QQMessageConvertible.swift in Sources */,
 				849DD4332108860F0016234F /* Share.swift in Sources */,
 				844F2EA3210724410054FE5D /* Wrapper.swift in Sources */,
 				844F2EA1210724280054FE5D /* Proxy.swift in Sources */,

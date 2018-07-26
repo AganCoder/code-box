@@ -36,4 +36,13 @@ class Manager {
         
         info.wrapper.auth(complete: complete)
     }
+    
+    func shareMessage(with message: Message, to type: Social) {
+        
+        let cInfo = self.configurations.reversed().first { $0.type == type }
+        
+        guard let info = cInfo else { return }
+        
+        info.wrapper.shareMessage(with: message)
+    }
 }
