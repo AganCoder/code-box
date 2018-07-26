@@ -66,17 +66,18 @@ extension QQ: QQApiInterfaceDelegate {
         
         defer { self.completeBlock = nil }
         
-        do {
-            let user = try response.asUser()
-            completeBlock(Result.success(user))
-            
-        } catch {
-            if let error = error as? RError {
-                completeBlock(Result.failure(error))
-            } else {
-                completeBlock(Result.failure(.unKnown))
-            }
+        guard response.retCode == Int32(URLREQUEST_SUCCEED.rawValue) else {
+            completeBlock(Result.failure(RError.OauthFail(reason: .urlRequestFailed)))
+            return
         }
+        
+        let user = User()
+        user.uid = self.tencentOAuth?.appId
+        user.nickName = response.jsonResponse?["nickname"] as? String
+        user.gender = response.jsonResponse?["gender"] as? String
+        user.avatar = response.jsonResponse?["figureurl_qq_2"] as? String
+        user.accessToken = self.tencentOAuth?.accessToken
+        completeBlock(Result.success(user))
     }
 }
 

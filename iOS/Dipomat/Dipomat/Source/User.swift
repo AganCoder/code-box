@@ -23,23 +23,9 @@ class User {
     
     var avatar: String?
 
-    var gender: NSString?
+    var gender: String?
     
     var rawData: [AnyHashable: Any]?
-    
-    
-}
-
-extension APIResponse: UserConvertible {
-    
-    func asUser() throws -> User {
-        
-        guard self.retCode == Int32(URLREQUEST_SUCCEED.rawValue) else { throw RError.OauthFail(reason: .urlRequestFailed) }
-        
-        var user = User()
-        
-        return user
-    }
 }
 
 
