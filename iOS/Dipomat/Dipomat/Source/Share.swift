@@ -42,7 +42,21 @@ public enum SharedKey: String {
 extension SharedKey: Hashable {
     
     public static func == (lhs: SharedKey, rhs: SharedKey) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        switch (lhs, rhs) {
+        case (.userInfo, .userInfo): return true
+        case (.text, .text): return true
+        case (.messageId, .messageId): return true
+        case (.title, .title): return true
+        case (.desc, .desc): return true
+        case (.thumbnailableImage, .thumbnailableImage): return true
+        case (.data, .data): return true
+        case (.audioUrl, .audioUrl): return true
+        case (.audioDataUrl, .audioDataUrl): return true
+        case (.videoUrl, .videoUrl): return true
+        case (.videoDataUrl, .videoDataUrl): return true
+        case (.webPageUrl, .webPageUrl): return true
+        default: return false
+        }
     }
 }
 
@@ -105,6 +119,7 @@ class AudioMessage: Message {
 }
 
 class VideoMessage: Message {
+    
     var messageId: String?
     
     var title: String?
