@@ -47,12 +47,13 @@ extension SharedKey: Hashable {
 }
 
 
-
-
-
 class TextMessage: Message {
     
     var text: String?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
 class MediaMessage: Message {
@@ -61,27 +62,81 @@ class MediaMessage: Message {
     var title: String?
     var desc: String?
     var thumbnailableImage: UIImage?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
-class ImageMessage: MediaMessage {
+class ImageMessage: Message {
+    
+    var messageId: String?
+    
+    var title: String?
+    
+    var desc: String?
+    
+    var thumbnailableImage: UIImage?
+    
     var data: Data?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
-class AudioMessage: MediaMessage {
+class AudioMessage: Message {
+    
+    var messageId: String?
+    
+    var title: String?
+    
+    var desc: String?
+    
+    var thumbnailableImage: UIImage?
+    
     var audioUrl: String?
+    
     var audioDataUrl: String?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
-class VideoMessage: MediaMessage {
+class VideoMessage: Message {
+    var messageId: String?
+    
+    var title: String?
+    
+    var desc: String?
+    
+    var thumbnailableImage: UIImage?
     
     var videoUrl: String?
     
     var videoDataUrl: String?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
-class PageMessage: MediaMessage {
+class PageMessage: Message {
+    
+    var messageId: String?
+    
+    var title: String?
+    
+    var desc: String?
+    
+    var thumbnailableImage: UIImage?
     
     var webPageUrl: String?
+    
+    var keys: [SharedKey] {
+        return [.text]
+    }
 }
 
 
