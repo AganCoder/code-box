@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/enjoy/Documents/Developer/code-box/iOS/Objects.playground">
+   </FileRef>
+   <FileRef
+      location = "group:jdCycleView/jdCycleView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:01.&#x5012;&#x8ba1;&#x65f6;.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Swift UserDefault&#x534f;&#x8bae;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Type-Erasure.playground">
+   </FileRef>
+</Workspace>
